@@ -21,6 +21,8 @@ Tài liệu này mô tả cách chạy **full stack** (Next.js + FastAPI + MySQL
 
 ```sql
 CREATE DATABASE IF NOT EXISTS mrthue CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'mrthue'@'localhost' IDENTIFIED BY 'mrthue2026';
+GRANT ALL PRIVILEGES ON mrthue.* TO 'mrthue'@'localhost';
 ```
 
 2. Import schema ban đầu (bảng funnel, session…):
