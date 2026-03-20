@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#f8f9fa",
+              "secondary-container": "#d6e3fb",
+              "on-secondary-fixed-variant": "#4f5c70",
+              "on-secondary": "#f8f8ff",
+              "tertiary-fixed-dim": "#d5cdee",
+              "on-secondary-container": "#465365",
+              "on-secondary-fixed": "#334052",
+              "on-background": "#2b3437",
+              "surface-bright": "#f8f9fa",
+              "secondary-dim": "#475467",
+              "tertiary": "#615b77",
+              "secondary-fixed-dim": "#c8d5ec",
+              "outline": "#737c7f",
+              "on-surface": "#2b3437",
+              "inverse-on-surface": "#9b9d9e",
+              "outline-variant": "#abb3b7",
+              "on-surface-variant": "#586064",
+              "surface-tint": "#0056d2",
+              "tertiary-container": "#e3dbfd",
+              "secondary": "#536073",
+              "tertiary-dim": "#55506b",
+              "primary-container": "#dae2ff",
+              "surface-variant": "#dbe4e7",
+              "error-dim": "#4e0309",
+              "inverse-surface": "#0c0f10",
+              "primary-fixed": "#dae2ff",
+              "surface-container-high": "#e2e9ec",
+              "on-primary": "#f8f7ff",
+              "surface-container-low": "#f1f4f6",
+              "surface-dim": "#d1dce0",
+              "inverse-primary": "#5b8cff",
+              "primary": "#0056d2",
+              "on-primary-fixed": "#003991",
+              "on-error": "#fff7f6",
+              "tertiary-fixed": "#e3dbfd",
+              "primary-dim": "#004bb9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#0053cc",
+              "on-tertiary-fixed-variant": "#5b5672",
+              "on-tertiary": "#fcf7ff",
+              "surface-container": "#eaeff1",
+              "primary-fixed-dim": "#c6d3ff",
+              "surface-container-highest": "#dbe4e7",
+              "error-container": "#fe8983",
+              "on-primary-container": "#004ab7",
+              "secondary-fixed": "#d6e3fb",
+              "on-tertiary-container": "#524c68",
+              "on-error-container": "#752121",
+              "error": "#9f403d",
+              "surface": "#f8f9fa",
+              "on-tertiary-fixed": "#3f3a54"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0056d2 0%, #004bb9 100%);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2b3437;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 h-20 max-w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="account_balance">account_balance</span>
+<span class="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400 font-['Manrope']">The Informed Curator</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-blue-800 dark:text-blue-300 font-semibold border-b-2 border-blue-600 pb-1 text-sm transition-colors" href="#">Trang chủ</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-colors px-2 py-1 rounded text-sm" href="#">Dịch vụ</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-colors px-2 py-1 rounded text-sm" href="#">Thư viện luật</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-colors px-2 py-1 rounded text-sm" href="#">Liên hệ</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-md font-medium text-sm hover:opacity-90 transition-all scale-95 duration-200 ease-in-out">
+                Bắt đầu Chẩn đoán Thuế Cá nhân hóa
+            </button>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-8">
+<span class="text-on-surface-variant font-label tracking-[0.2em] uppercase text-xs mb-6 block">Premium Tax Advisory</span>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
+                            Phiên tư vấn <br/>
+<span class="text-primary italic">chuyên sâu</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-xl mb-12 font-body leading-relaxed mx-auto md:mx-0">
+                            Vượt qua ranh giới của những con số thông thường. Chúng tôi kiến tạo lộ trình thuế minh bạch, chuẩn mực cho từng hộ kinh doanh cá thể.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="hero-gradient text-on-primary px-10 py-5 rounded-md text-lg font-bold flex items-center justify-center gap-3 hover:shadow-xl transition-all active:scale-95 group">
+                                Bắt đầu Chẩn đoán Thuế
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface px-10 py-5 rounded-md text-lg font-medium hover:bg-surface-variant transition-colors">
+                                Tìm hiểu quy trình
+                            </button>
+</div>
+</div>
+<div class="md:col-span-4 hidden md:block">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-fixed-dim rounded-full blur-3xl opacity-30"></div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 relative z-20">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<div>
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Trạng thái</p>
+<p class="font-bold text-on-surface">Đang hoạt động</p>
+</div>
+</div>
+<div class="h-px bg-outline-variant/20 w-full"></div>
+<div class="space-y-2">
+<p class="text-sm text-on-surface-variant italic">"Sự minh bạch trong thuế chính là nền tảng cho sự phát triển bền vững của doanh nghiệp."</p>
+<p class="text-xs font-bold">— Curator Group</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3-Step Process Section -->
+<section class="bg-primary-container/30 py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight text-on-surface mb-4 font-headline">Quy trình Chẩn đoán Thuế 3 Bước</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Lộ trình được thiết kế khoa học để tối ưu hóa quyền lợi và đảm bảo tuân thủ pháp luật tuyệt đối.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-2xl font-bold mb-6 relative z-10 transition-transform group-hover:scale-110">
+                            1
+                        </div>
+<div class="absolute top-8 left-1/2 w-full h-0.5 bg-primary/20 hidden md:block"></div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Sàng lọc Cơ bản</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Thu thập và phân tích dữ liệu sơ bộ về mô hình kinh doanh và thực trạng kê khai hiện tại của bạn.
+                        </p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-2xl font-bold mb-6 relative z-10 transition-transform group-hover:scale-110">
+                            2
+                        </div>
+<div class="absolute top-8 left-1/2 w-full h-0.5 bg-primary/20 hidden md:block"></div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Nhận định Sơ bộ</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Đánh giá rủi ro và nhận diện các cơ hội tối ưu hóa thuế dựa trên các thông tư, nghị định hiện hành.
+                        </p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-2xl font-bold mb-6 relative z-10 transition-transform group-hover:scale-110">
+                            3
+                        </div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Giải pháp Chuyên sâu</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Xây dựng chiến lược thuế dài hạn và cam kết đồng hành thực hiện để đảm bảo kinh doanh an toàn.
+                        </p>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="bg-primary text-on-primary px-12 py-5 rounded-md font-bold text-lg hover:bg-primary-dim transition-all shadow-lg hover:shadow-primary/30">
+                        Bắt đầu Chẩn đoán Ngay
+                    </button>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-3xl font-bold tracking-tight text-on-surface mb-4">Giá trị cốt lõi của sự đồng hành</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl group hover:bg-surface-bright transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-primary-fixed-dim flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="gavel">gavel</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Dựa trên trích dẫn luật thực tế</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Mọi lời khuyên đều được đối chiếu trực tiếp với các điều khoản thông tư, nghị định hiện hành. Loại bỏ hoàn toàn rủi ro pháp lý từ sự phỏng đoán.
+                        </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl group hover:bg-surface-bright transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-primary-fixed-dim flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="person_search">person_search</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Cá nhân hóa cho từng hộ kinh doanh</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Không có giải pháp chung cho tất cả. Chúng tôi phân tích mô hình doanh thu, chi phí đặc thù của bạn để tối ưu hóa nghĩa vụ thuế một cách thông minh nhất.
+                        </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-10 rounded-xl group hover:bg-surface-bright transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-primary-fixed-dim flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="encrypted">encrypted</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Bảo mật tuyệt đối</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Dữ liệu tài chính là linh hồn của doanh nghiệp. Hệ thống bảo mật đa tầng cam kết tính riêng tư và an toàn dữ liệu ở cấp độ ngân hàng.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Asymmetric Layout -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-on-surface rounded-2xl overflow-hidden flex flex-col md:flex-row items-stretch">
+<div class="md:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+<h2 class="text-4xl font-bold text-background mb-6 leading-tight">Sẵn sàng tối ưu hóa hệ thống thuế của bạn?</h2>
+<p class="text-outline-variant text-lg mb-10">Kết nối với chuyên gia của chúng tôi để bắt đầu hành trình kinh doanh minh bạch và hiệu quả ngay hôm nay.</p>
+<div class="flex">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-md font-bold flex items-center gap-2 hover:bg-primary-dim transition-colors">
+                                Đặt lịch chẩn đoán
+                                <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</button>
+</div>
+</div>
+<div class="md:w-1/2 relative min-h-[300px]">
+<img alt="Professional tax consultation workspace" class="absolute inset-0 w-full h-full object-cover grayscale opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD61zheKJReeycTXxrneOcgakRe_lYUb34uPyH8MK8Z7pgVHakwotd-JkhKKdSx7323juc1A6S8Bs1uPZuWtszWkadIqknTmNL0mdwbPErjPoCCIhC-czCGpU7YiYRXoMfcqzwk5gYdeZ9CArDoFbVxQ-t0Rxlh_Wfn8wuaeXo1wcMSTrVf_fxk9WNyy1u-e4il3h_4AWcBAObETaKFD1kq5f1E8SFwidfoMD0403oCAfTrx6x672-K840CHySdcCSq0_Rpaz3ZcA"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-slate-100 dark:bg-slate-950 mt-auto py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-400" data-icon="account_balance">account_balance</span>
+<span class="text-lg font-black text-slate-900 dark:text-slate-100 font-['Manrope']">The Informed Curator</span>
+</div>
+<p class="font-inter text-sm antialiased text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed">
+                    Giải pháp tư vấn thuế chuyên sâu dành riêng cho hộ kinh doanh và doanh nghiệp nhỏ. Minh bạch, tận tâm và bảo mật.
+                </p>
+<div class="font-inter text-sm antialiased text-slate-500 opacity-80">
+                    © 2024 Informed Curator Tax Consultancy. Architectural Precision in Finance.
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm uppercase tracking-widest">Dịch vụ</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Tư vấn thuế</a></li>
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Kế toán hộ kinh doanh</a></li>
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Lập tờ khai</a></li>
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Consultation Guide</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm uppercase tracking-widest">Pháp lý</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-inter text-sm antialiased text-slate-500 hover:text-blue-700 dark:hover:text-blue-300 transition-all" href="#">Member Portal</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
